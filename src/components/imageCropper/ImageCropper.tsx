@@ -4,7 +4,6 @@ import './ImageCropper.scss';
 
 export class ImageCropper extends React.PureComponent<IImageCropperProps, IImageCropperState> {
     private _imageRef: HTMLImageElement | undefined;
-    private _savedCropUrl: string = '';
 
     constructor(props: IImageCropperProps, context: any) {
         super(props, context);
