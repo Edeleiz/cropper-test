@@ -15,7 +15,8 @@ export class CropsList extends React.PureComponent<ICropsList> {
         return (
             <div className="crops-list">
                 {this.props.cropsUrls.map(cropUrl => 
-                    <CropRenderer 
+                    <CropRenderer
+                        key={cropUrl}    
                         imageUrl={cropUrl} 
                         onDeleteCallback={this.onCropDelete}/>
                 )}
