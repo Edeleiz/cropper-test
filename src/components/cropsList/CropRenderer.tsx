@@ -11,7 +11,7 @@ export class CropRenderer extends React.PureComponent<ICropRendererProps> {
     public render(): React.ReactNode {
         return (
             <div className="crop-renderer">
-                <img alt="Saved crop" src={this.props.imageUrl} />
+                <img className="saved-crop-image" alt="Saved crop" src={this.props.imageUrl} />
                 <button onClick={this.onDeleteClick}>
                     <span>Delete</span>
                 </button>

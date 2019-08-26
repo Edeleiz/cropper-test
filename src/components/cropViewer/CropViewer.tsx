@@ -13,7 +13,8 @@ export class CropViewer extends React.PureComponent<ICropViewerProps> {
             <div className="crop-viewer">
                 {this.props.newCropUrl && (
                     <div className="content">
-                        <img alt="Crop" style={{ maxWidth: "100%" }} src={this.props.newCropUrl} />
+                        <span className="title">Preview</span>
+                        <img className="preview-img" alt="Crop" style={{ maxWidth: "100%" }} src={this.props.newCropUrl} />
                         <button className="save-button" onClick={this.onSaveClick}>
                             <span>Save</span>
                         </button>

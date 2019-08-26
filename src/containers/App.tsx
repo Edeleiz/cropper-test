@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import './App.scss';
-import {Cropper} from "../components/cropper/Cropper";
 import {ImageCropper} from "../components/imageCropper/ImageCropper";
 import {CropViewer} from "../components/cropViewer/CropViewer";
 import {CropsList} from "../components/cropsList/CropsList";
@@ -25,16 +24,17 @@ const App: React.FC = () => {
 
     return (
         <div className="App">
-            <Cropper/>
             <ImageCropper
                 sourceImageUrl={require('../resources/image.png')}
                 onCropChange={onCropChangeCallback}/>
-            <CropViewer
-                newCropUrl={state.currentCropUrl}
-                onSaveCallback={onCropSaveCallback}/>
-            <CropsList 
-                cropsUrls={state.savedCrops} 
-                onCropDeleteCallback={onCropDeleteCallback}/>
+            <div className="crop-menu">
+                <CropViewer
+                    newCropUrl={state.currentCropUrl}
+                    onSaveCallback={onCropSaveCallback}/>
+                <CropsList
+                    cropsUrls={state.savedCrops}
+                    onCropDeleteCallback={onCropDeleteCallback}/>
+            </div>
         </div>
     );
 };

@@ -14,12 +14,16 @@ export class CropsList extends React.PureComponent<ICropsList> {
             return undefined;
         return (
             <div className="crops-list">
-                {this.props.cropsUrls.map(cropUrl => 
+                <span className="crops-title">Saved</span>
+                {
+                    this.props.cropsUrls.length > 0 ?
+                    this.props.cropsUrls.map(cropUrl => 
                     <CropRenderer
                         key={cropUrl}    
                         imageUrl={cropUrl} 
                         onDeleteCallback={this.onCropDelete}/>
-                )}
+                    ) : <span className="no-crops-title">Nothing saved yet</span>
+                }
             </div>
         );
     }

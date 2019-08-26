@@ -1,6 +1,6 @@
 import React from "react";
-import ReactCrop, {Crop, PercentCrop} from "react-image-crop";
-import "react-image-crop/dist/ReactCrop.css";
+import ReactCrop, {Crop, PercentCrop} from 'react-image-crop';
+import './ImageCropper.scss';
 
 export class ImageCropper extends React.PureComponent<IImageCropperProps, IImageCropperState> {
     private _imageRef: HTMLImageElement | undefined;
@@ -16,7 +16,7 @@ export class ImageCropper extends React.PureComponent<IImageCropperProps, IImage
         this.state = {crop: {
                 unit: "%",
                 width: 30,
-                aspect: 16 / 9
+                aspect: 1
             }};
     }
 
